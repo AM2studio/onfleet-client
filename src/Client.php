@@ -65,7 +65,7 @@ class Client extends Guzzle
      * @throws \GuzzleHttp\Exception\ClientException
      * @return null|\Psr\Http\Message\ResponseInterface|Response
      */
-    public function get($uri, array $options = [])
+    public function get($uri, array $options = []): \Psr\Http\Message\ResponseInterface
     {
         try {
             return Response::fromResponse(parent::get($uri, $options));
